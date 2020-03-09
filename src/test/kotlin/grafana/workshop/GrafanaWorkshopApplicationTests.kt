@@ -1,4 +1,4 @@
-package nz.co.eroad.grafanaworkshop
+package grafana.workshop
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

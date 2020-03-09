@@ -1,4 +1,4 @@
-package nz.co.eroad.grafanaworkshop
+package grafana.workshop
 
 import io.micrometer.core.instrument.MeterRegistry
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -28,7 +28,7 @@ class AnInterestingJob(registry: MeterRegistry) {
         counter.increment();
 
 		timer.record {
-			val delayMs = Random.nextLong(1000)
+			val delayMs = Random.nextLong(4000)
 			sleep(delayMs)
 		}
 	}
