@@ -21,12 +21,15 @@ fun main(args: Array<String>) {
 class AnInterestingJob(registry: MeterRegistry) {
     // TODO add some metrics!
     val counter = registry.counter("we-did-the-things");
+	val timer = registry.timer("how-long-it-took");
 
 	@Scheduled(fixedRate = 5000)
 	fun relaxForABit() {
-        counter.count();
+        counter.increment();
 
-		val delayMs = Random.nextLong(1000)
-		sleep(delayMs)
+		timer.record {
+			val delayMs = Random.nextLong(1000)
+			sleep(delayMs)
+		}
 	}
 }

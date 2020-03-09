@@ -1,3 +1,8 @@
+management.metrics.export.graphite:
+  host: localhost
+  enabled: true
+  step: 1s
+
 management.endpoints:
   enabled-by-default: true
   web.exposure.include: "*"
