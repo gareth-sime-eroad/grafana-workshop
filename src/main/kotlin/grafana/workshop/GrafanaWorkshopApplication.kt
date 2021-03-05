@@ -25,7 +25,7 @@ class AnInterestingJob(registry: MeterRegistry) {
 
 	@Scheduled(fixedRate = 5000)
 	fun relaxForABit() {
-        counter.increment();
+        counter.increment()
 
 		timer.record {
 			val delayMs = Random.nextLong(4000)
